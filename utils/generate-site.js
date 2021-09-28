@@ -20,7 +20,7 @@ const writeFile = fileContent => {
 
 const copyFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.copyFile('./dist/index.html', fileContent, err => {
+        fs.copyFile('./src/style.css', '.dist/style.css', err => {
 
             if (err) {
                 reject(err);
@@ -29,7 +29,7 @@ const copyFile = fileContent => {
             }
             resolve({
                 ok: true,
-                message: 'File copied!'
+                message: 'Stylesheet copied!'
             });
         });
     });
